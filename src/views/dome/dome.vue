@@ -1,12 +1,24 @@
 <template>
-  <div class="dome">
-    <input type="button"
+  <div class="mian">
+    <!-- <input type="button"
            value="显示弹窗"
-           @click="showToast">
-    <br />
-    <button @click="login">登录</button>
-    <br />
-    <button @click="login2">封装的api登录</button>
+           @click="showToast"> -->
+
+    <!-- <button @click="login">登录</button> -->
+
+    <!-- <button @click="login2">封装的api登录</button> -->
+    <div class="dome">
+      <div class="box">
+        <el-button type="primary"
+                   value="显示弹窗"
+                   @click="showToast">显示轻提示</el-button>
+        <el-button type="primary"
+                   @click="login">主要按钮</el-button>
+        <el-button type="primary"
+                   @click="login2">主要按钮</el-button>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -18,7 +30,7 @@ export default {
   methods: {
     showToast () {
       this.$toast({
-        text: '我是消息',
+        text: '我是轻提示',
         type: 'info',
         duration: 3000
       })
@@ -46,5 +58,21 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less" scoped>
+.mian {
+  .dome {
+    width: 500px;
+    height: 300px;
+    border: 1px solid #ccc;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    // 子水平垂直居中
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // text-align: center;
+  }
+}
 </style>
