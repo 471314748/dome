@@ -8,6 +8,9 @@ import instance from './utils/request'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
+// import AddThis from 'vue-simple-addthis-share';
+// Vue.component('add-this', AddThis);
+
 // 导入自定义全局轻提示组件
 import toastRegistry from './components/toast/toast.js'
 
@@ -16,6 +19,7 @@ Vue.use(ElementUI)
 
 // 往vue原型添加方法：axios请求方法
 Vue.prototype.$axios = instance
+// Vue.prototype.$wx = wx
 
 Vue.config.productionTip = false
 
